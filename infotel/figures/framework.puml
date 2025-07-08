@@ -1,0 +1,79 @@
+@startuml
+
+skinparam style strictuml
+' skinparam nodesep 20
+skinparam ranksep 20
+' skinparam shadowing true
+skinparam dpi 300
+skinparam PackageTitleAlignment left
+
+package "**IT Framework for Remote Work**" {
+
+      package "**7. Compliance & Risk Management**" {
+        [**Data Privacy & Security**]
+        [**Remote Work Risk Assessment**]
+
+        [**Data Privacy & Security**] -d[hidden]- [**Remote Work Risk Assessment**]
+      }
+
+      package "**6. Support & Troubleshooting**" {
+        [**IT Helpdesk Services**]
+        [**Technical Support Protocols**]
+
+        [**IT Helpdesk Services**] -d[hidden]- [**Technical Support Protocols**]
+      }
+
+      [**Technical Support Protocols**] -d[hidden]- [**Data Privacy & Security**]
+    
+
+    
+      package "**5. Employee Well-being**" {
+        [**Well-being Monitoring**]
+        [**Work-life Balance Support**]
+
+        [**Well-being Monitoring**] -d[hidden]- [**Work-life Balance Support**]
+      }
+
+      package "**4. Digital Skills & Awareness**" {
+        [**Digital Literacy Training**]
+        [**Mindset Development**]
+
+        [**Digital Literacy Training**] -d[hidden]- [**Mindset Development**]
+      }
+
+      
+    
+    package "**3. Governance & Policy**" {
+      [**Ethical Codes & Conduct**]
+      [**Performance Measurement**]
+      [**Attendance & Reporting**]
+
+      [**Ethical Codes & Conduct**] -d[hidden]- [**Performance Measurement**]
+      [**Performance Measurement**] -d[hidden]- [**Attendance & Reporting**]
+    }
+
+    package "**2. Application Ecosystem**" {
+      [**Communication & Collaboration Tools**]
+      [**Productivity & Project Management**]
+      [**Document & Workspace Systems**]
+      [**Advanced Technologies (Optional)**]
+
+      [**Communication & Collaboration Tools**] -d[hidden]- [**Productivity & Project Management**]
+      [**Productivity & Project Management**] -d[hidden]- [**Document & Workspace Systems**]
+      [**Document & Workspace Systems**] -d[hidden]- [**Advanced Technologies (Optional)**]
+    }
+
+    package "**1. Infrastructure Readiness**" {
+      [**Reliable Internet Access**]
+      [**Device Provision**]
+      [**Security Infrastructure**]
+
+      [**Reliable Internet Access**] -d[hidden]- [**Device Provision**]
+      [**Device Provision**] -d[hidden]- [**Security Infrastructure**]
+    }
+
+    [**Security Infrastructure**] -d[hidden]- [**Digital Literacy Training**]
+    [**Attendance & Reporting**] -d[hidden]- [**Well-being Monitoring**]
+}
+
+@enduml
